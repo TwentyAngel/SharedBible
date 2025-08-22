@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding-bottom: 60px;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.fade-out {
+  animation: fadeOut 0.1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* HEADER FIJO */
+@media (max-width: 1024px) {
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
+  .frase-del-dia {
+    padding: 15px;
+    background-color: #1a1a1a;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .create-sermon-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #00d1b2;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .footer-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .footer-mobile a:hover {
+    color: #00d1b2;
+  }
+
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar-container input {
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50%;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 20px;
+    flex-grow: 1;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .search-bar-container .lupa {
+    padding: 12px 20px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:active,
+  .lupa:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+
+  .filter-btn {
+    padding: 10px 20px;
+    background-color: #313131;
+    color: #ECECEC;
+    border: none;
+    border-radius: 20px; /* Botones más redondeados */
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 12px;
+    margin-right: 6px;
+  }
+  
+  .filter-btn.active {
+    background-color: #3498DB;
+    color: white;
+    border-color: #3498DB;
+    font-weight: bold;
+  }
+
+  .filter-buttons {
+    margin-left: 12.8%;
+    margin-right: 6%;
+  }
+
+  h2 {
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+
+  .counsel-card {
+    background-color: #1e1e1e;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 1px;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+
+}

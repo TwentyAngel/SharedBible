@@ -1,0 +1,128 @@
+<!DOCTYPE html5>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - SharedBible</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/comunidad.css">
+    <link rel="icon" type="image/x-icon" href="img/image.png">
+</head>
+
+<body>
+
+    <dialog id="Bienvenido">
+        <h2>Bienvenid@</h2><br/>
+        <p>¡Bienvenid@ a <strong>SharedBible</strong>! Nos alegra que estés aquí. En esta comunidad, la Palabra de Dios cobra vida a través de la voz de sus siervos. <strong>SharedBible</strong> es el espacio donde predicadores y pastores pueden compartir sus mensajes, llevando inspiración y enseñanza a cada rincón del mundo. Te invitamos a explorar las distintas secciones que hemos creado para ti: en Inicio encontrarás las últimas predicaciones y mensajes que te edificarán; en la <strong>Comunidad</strong> podrás conectarte con hermanos de fe de diversas iglesias, compartir tus pensamientos, experiencias y crecer en comunión en nuestro espacio tipo red social; en <strong>Testimonios </strong> te podrás inspirar con las poderosas historias de fe y transformación que otros usuarios han compartido, ¡y animarte a subir el tuyo y glorificar a Dios! Si estás atravesando un momento difícil, en <strong>Consejos</strong> encontrarás palabras de aliento, guía y sabiduría basadas en la <strong>Biblia</strong>, acompañadas de versículos que fortalecerán tu espíritu. También puedes visualizar predicaciones y contenidos audiovisuales en la sección de <strong>Videos</strong> y administrar tu perfil, compartir tus propias predicaciones y participar activamente en esta familia espiritual en tu <strong>Cuenta</strong>. Te invitamos a ser parte activa de <strong>SharedBible</strong>, un lugar donde la fe se comparte, se vive y se celebra. ¡Que Dios te bendiga!</p><br/>
+        <form method="dialog">
+            <button id="closeDialog">Cerrar</button>
+        </form>
+    </dialog>
+
+    <div class="contenido">
+
+        <header>
+            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="logo"></a>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="comunidad.html" class="nav-link">Comunidad</a></li>
+                    <li class="nav-item"><a href="testimonios.html" class="nav-link">Testimonios</a></li>
+                    <li class="nav-item"><a href="consejos.html" class="nav-link">Consejos</a></li>
+                    <li class="nav-item"><a href="cuenta.html" class="nav-link">Cuenta</a></li>
+                </ul>
+                <button id="btn">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Comunidad</h1>
+            <section class="post-creation">
+                <textarea id="postContent" placeholder="¿Qué tienes en tu corazón para compartir hoy?" rows="5"></textarea>
+                <button id="publishPost">Publicar</button>
+            </section>
+
+            <section class="posts-feed">
+                <div class="post-card">
+                    <div class="post-header">
+                        <span class="username">Usuario Ejemplo 1</span>
+                        <span class="post-date">Hace 2 horas</span>
+                    </div>
+                    <div class="post-body">
+                        <p>¡Alabado sea el Señor! Que la paz de Dios que sobrepasa todo entendimiento, guarde vuestros corazones y vuestros pensamientos en Cristo Jesús. Filipenses 4:7.</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn">❤️ Me gusta (15)</button>
+                        <button class="action-btn comment-btn">💬 Comentar</button>
+                        <button class="action-btn share-btn">🔗 Compartir</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-header">
+                        <span class="username">FeVerde</span>
+                        <span class="post-date">Ayer</span>
+                    </div>
+                    <div class="post-body">
+                        <p>Recordando que "Todo lo puedo en Cristo que me fortalece." Filipenses 4:13. ¡No hay límites con Dios!</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn like-btn">❤️ Me gusta (<span class="like-count">30</span>)</button>
+                        <button class="action-btn comment-btn">💬 Comentar</button>
+                        <button class="action-btn share-btn">🔗 Compartir</button>
+                    </div>
+                     <div class="comments-section" style="display: none;">
+                        <div class="comments-list">
+                            </div>
+                        <div class="comment-input-area">
+                            <textarea class="comment-textarea" placeholder="Escribe un comentario..." rows="1"></textarea>
+                            <button class="add-comment-btn">Añadir Comentario</button>
+                        </div>
+                    </div>
+                </div>
+
+                </section>
+        </main>
+
+        <footer>
+            <p><strong>Shared Bible</strong></p>
+        </footer>
+
+
+        </div> <div id="deleteConfirmationDialog" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span> <h3>¿Estás seguro de que quieres eliminar este comentario?</h3>
+                <div class="modal-buttons">
+                    <button id="confirmDelete">Eliminar</button>
+                    <button id="cancelDelete">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="shareModal" class="modal">
+            <div class="share-modal-content">
+                <span class="close-button">&times;</span>
+                <h4 class="textoxd">Compartir Publicación</h4>
+                <div class="share-options">
+                    <button class="share-option-button" id="savePostButton">
+                        <div class="option-circle">💾</div>
+                        <span>Guardar</span>
+                    </button>
+                    <button class="share-option-button" id="copyLinkButton">
+                        <div class="option-circle">🔗</div>
+                        <span>Copiar Enlace</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="scripts/aspect-btn.js"></script>
+    <script src="scripts/cookie-handler.js"></script>
+    <script src="scripts/dialog-init.js"></script>
+    <script src="scripts/comunidad.js"></script> </body>
+
+</html>

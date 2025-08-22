@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  padding-bottom: 60px;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.fade-out {
+  animation: fadeOut 0.1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* HEADER FIJO */
+@media (max-width: 1024px) {
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
+  .frase-del-dia {
+    padding: 15px;
+    background-color: #1a1a1a;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+  }
+
+  .t1 {
+    margin-left: 2.8%;
+  }
+
+  .mini {
+    max-width: 100% !important ;
+    height: 500px;
+  }
+
+  .share-modal-content {
+    color: white;
+    text-align: center;
+    padding: 100px 50px;
+    margin: 10% auto; 
+    border-radius: 8px;
+    height: 115px;
+  }
+
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+  background-color: #fefefe;
+  margin: auto auto; /* Centrar en la pantalla /
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; / Ancho del diálogo */
+  border-radius: 8px;
+  position: relative;
+  padding: 15px 40px;
+  height: 115px;
+  }
+
+  .share-option-button {
+  background-color:#00d1b2;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  font-family: inherit; /* Hereda la fuente principal */
+  color: black; /* Hereda el color del texto */
+  border-radius: 15px;
+  }
+
+  .acciones:active, a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .create-sermon-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #00d1b2;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .footer-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .footer-mobile a:hover {
+    color: #00d1b2;
+  }
+}
+
+.footer-mobile a:active img {
+  transform: scale(1.2);
+  transition: transform 0.15s ease;
+}
+
+
+/* --- Tarjeta de predicación --- */
+@media (max-width: 1024px) {
+  .card {
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button:active,
+  .create-sermon-btn:active,
+  .share-option-button:active,
+  span:active, .delete-sermon-btn:active,
+  .action-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+
+
+  .card img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+
+  .card h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 20px;
+  }
+
+  .sermon-content-text {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .sermon-date,
+  .card p {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .card {
+    animation: aparecerDesdeAbajo 0.4s ease forwards;
+  }
+  
+  @keyframes aparecerDesdeAbajo {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .delete-sermon-btn {
+    background-color: #ff4d4f;
+    color: white;
+  }
+
+  .share-btn2 {
+    background-color: #00d1b2;
+    color: black;
+  }
+
+  .linked {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .contenidopredi {
+    max-width: 88%;
+  }
+
+  .create-sermon-modal {
+    background-color: #1a1a1a;
+    border: none;
+    color: white;
+  }
+
+  .create-sermon-modal textarea {
+    background-color: #1a1a1a;
+    border: solid white 1px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .create-sermon-modal input {
+    background-color: #1a1a1a;
+    border: solid white 1px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .aviso {
+    color: rgb(202, 202, 45);
+  }
+
+  .delete-sermon-dialog {
+    background-color: #1f1f1f;
+    border: none;
+    color: white;
+    box-shadow: 0 0 2000px 2000px #1a1a1a70;
+    border-radius: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .accion {
+    margin-bottom: 4%;
+  }
+}
+
+.sermon-controls {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: scale(fixed);
+  max-width: fit-content;
+}
+
+.sermon-search-bar {
+  border: none;
+  border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+  border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
+  width: 50%;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.lupa {
+  padding: 12px 20px;
+  border: none;
+  border-top-right-radius: 10px;    /* Redondea la esquina superior derecha */
+  border-bottom-right-radius: 10px; /* Redondea la esquina inferior derecha */
+  background-color: #1a1a1a;
+}
+
+.sermon-filter-rama {
+  border: none;
+  padding: 12px 1px;
+  width: 128px;
+  background-color: #1a1a1a;
+  color: white;
+}

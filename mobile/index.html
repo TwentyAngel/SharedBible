@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida: SharedBible</title>
+    <link rel="stylesheet" href="css/ini.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="manifest" href="/mobile/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <script>
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+        // Si NO es un celular (es PC) y NO está en la app instalada (modo standalone), redirige fuera
+        // Esto previene que los usuarios de PC vean la versión móvil a menos que la hayan instalado.
+        if (!isMobile && !isStandalone) {
+            window.location.href = "../"; // Redirige a la carpeta padre (versión de escritorio)
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('api/check_session.php') // Este archivo PHP es el que creamos antes
+                .then(response => response.json())
+                .then(data => {
+                    if (data.logged_in) {
+                        window.location.href = 'inicio.html';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al comprobar la sesión:', error);
+                    // Opcional: manejar el error si check_session.php falla
+                });
+        });
+    </script>
+
+    <style>
+        .install-modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija para cubrir toda la pantalla */
+            z-index: 1000; /* Por encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Habilitar scroll si el contenido es demasiado grande */
+            background-color: rgba(0,0,0,0.8); /* Fondo semi-transparente oscuro */
+            padding-top: 60px; /* Espacio desde arriba */
+        }
+        .install-modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 5% desde arriba y centrado horizontalmente */
+            padding: 12px;
+            border: 1px solid #888;
+            width: 90%; /* Ancho responsivo */
+            max-width: 500px; /* Máximo ancho para pantallas grandes */
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            color: #333; /* Color de texto para el modal */
+        }
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .install-modal-content h3 {
+            text-align: center;
+            margin-top: 0;
+            color: #000;
+        }
+        .install-modal-content p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .install-modal-content .platform-instructions {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .install-modal-content .platform-instructions h4 {
+            color: #555;
+        }
+        .install-modal-content .platform-instructions img {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body id="body" class="dark-mode fade-in">
+    <div class="ini">
+        <h2>Hola, bienvenid@ a</br></h2>
+        <h1>SharedBible</h1>
+        <h3>"La Biblia compartida."</h3>
+    </div>
+
+    <div class="acciones">
+        <a href="#" onclick="navegarConAnimacion('login.html')"><strong>Iniciar sesión ahora</strong></a><br><br><br><br>
+        <a href="#" onclick="navegarConAnimacion('inicio.html')"><strong>Entrar como invitado</strong></a>
+    </div>
+
+    <script src="scripts/animation/navegar.js"></script>
+
+    <div id="open-app-banner"></div> 
+    <script src="pwa-banner.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('✅ Service Worker registrado'))
+                .catch(err => console.error('❌ Error registrando SW:', err));
+        }
+    </script>
+
+    <div id="install-modal" class="install-modal">
+        <div class="install-modal-content">
+            <span class="close-button" id="close-install-modal">&times;</span>
+            <h3>¡Instala SharedBible para una mejor experiencia!</h3>
+            <div class="platform-instructions">
+                <h4>Para Android (Chrome):</h4>
+                <p>1. Toca el ícono de los 3 puntos <img src="img/3puntos.png" alt="Menú de 3 puntos" width="30px" height="30px">, luego busca y selecciona "Agregar a la pantalla...", despues da clic en instalar.</p>
+
+                <h4>Para iPhone (Safari):</h4>
+                <p>1. Toca el ícono "Compartir" <img src="img/share.png" alt="Compartir" width="30px" height="30px"> (en la barra inferior o superior de Safari) y luego "Añadir a inicio".</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const installModal = document.getElementById('install-modal');
+            const closeModalBtn = document.getElementById('close-install-modal');
+            const modalShownCookieName = 'pwa_install_modal_shown';
+
+            // Función para establecer una cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+
+            // Función para obtener una cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for(let i=0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream; // Para distinguir iOS
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+            const modalAlreadyShown = getCookie(modalShownCookieName) === 'true';
+
+            // Mostrar el modal si es móvil, no está en modo standalone y el modal no se ha mostrado antes
+            // Y no es una PWA instalada de escritorio que abre el URL móvil
+            if (isMobile && !isStandalone && !modalAlreadyShown) {
+                // Pequeño retraso para que la página cargue y el usuario no se sienta abrumado
+                setTimeout(() => {
+                    installModal.style.display = 'block';
+                }, 1000); // Muestra después de 1 segundo
+
+                // Guarda la cookie para no mostrarlo de nuevo
+                setCookie(modalShownCookieName, 'true', 30); // Mostrar una vez cada 30 días
+            }
+
+            // Cierra el modal
+            closeModalBtn.onclick = function() {
+                installModal.style.display = 'none';
+            }
+
+            // Cierra el modal si se hace clic fuera de él
+            window.onclick = function(event) {
+                if (event.target === installModal) {
+                    installModal.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

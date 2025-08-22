@@ -1,0 +1,625 @@
+/* Styles for Comunidad Page */
+.post-creation {
+    width: 60%;
+    margin: 40px auto 30px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+/* Dark mode for post-creation section */
+body.dark .post-creation {
+    background-color: #333333;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.post-creation textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Dark mode for textarea */
+body.dark .post-creation textarea {
+    background-color: #444444;
+    color: #FFFFFF;
+    border-color: #555555;
+}
+
+.post-creation button {
+    padding: 10px 25px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.post-creation button:hover {
+    background-color: #2980B9;
+}
+
+.posts-feed {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.post-card {
+    background-color: #d9dfe0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    color: #212121;
+}
+
+/* Dark mode for post-card */
+body.dark .post-card {
+    background-color: #3f3f3f;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Dark mode for post-header */
+body.dark .post-header {
+    color: #BBBBBB;
+}
+
+.post-header .username {
+    font-weight: bold;
+    color: #3498DB;
+}
+
+/* Dark mode for username */
+body.dark .post-header .username {
+    color: #72C4FF;
+}
+
+.post-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+/* Dark mode for post-actions border */
+body.dark .post-actions {
+    border-top: 1px solid #555;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark mode for action-buttons */
+body.dark .action-btn {
+    color: #ffffff;
+}
+
+.action-btn:hover {
+    background-color: #747474;
+    color: #e7e7e7;
+}
+
+/* Dark mode for action-buttons hover */
+body.dark .action-btn:hover {
+    background-color: #555;
+    color: #FFFFFF;
+}
+
+/* Specific colors for like button to make the heart red */
+.action-btn.like-btn {
+    color: #555;
+}
+
+.action-btn.like-btn:hover {
+    color: #e74c3c;
+}
+
+/* Adjust main heading margin for the community page for better alignment */
+main h1 {
+    margin-left: 20%;
+    margin-top: 4%;
+    margin-bottom: 32px;
+}
+
+/* Styles for Single Post/Preaching Views */
+
+/* Central container for single views - ALINEADO A LA IZQUIERDA */
+.single-post-view,
+.single-preaching-view {
+    width: 60%; /* Mismo ancho para consistencia */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20.1%; /* Alineado con el h1 de main */
+    margin-right: auto; /* Permite que el margen izquierdo fije la posición */
+}
+
+/* Base style for the view cards (similar to .post-card) */
+/* .preaching-card inherits much from .post-card, but we can make it explicit */
+.preaching-card {
+    background-color: #d9dfe0; /* Light background for light mode */
+    padding: 30px; /* Slightly more padding for main content */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #212121; /* Dark text for light mode */
+    margin-bottom: 25px; /* Spacing if multiple are ever on a page */
+}
+
+/* Dark mode for preaching-card */
+body.dark .preaching-card {
+    background-color: #3f3f3f; /* Darker background for dark mode */
+    color: #FFFFFF; /* White text for dark mode */
+    border: 1px solid #555555; /* Subtle border */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+/* Preaching header styles */
+.preaching-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Separator from media/body */
+}
+
+body.dark .preaching-header {
+    border-bottom: 1px solid #555;
+}
+
+.preaching-title {
+    font-size: 2.2rem; /* Larger title for prominence */
+    color: #3498DB; /* Accent color for titles */
+    text-align: left;
+}
+
+body.dark .preaching-title {
+    color: #72C4FF; /* Lighter accent for dark mode */
+}
+
+.preacher-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555; /* Softer color for author */
+    display: block; /* Ensures it's on its own line */
+    margin-bottom: 5px;
+}
+
+body.dark .preacher-name {
+    color: #BBBBBB;
+}
+
+.preaching-date {
+    font-size: 0.9em;
+    color: #777; /* Even softer color for date */
+    display: block;
+}
+
+body.dark .preaching-date {
+    color: #AAAAAA;
+}
+
+
+/* Media container for videos/audio */
+.preaching-media {
+    margin-bottom: 30px;
+    text-align: center; /* Center video/audio player */
+}
+
+.audio-player {
+    width: 100%;
+    max-width: 600px; /* Limit max width for audio player */
+    margin: 0 auto; /* Center the audio player */
+    background-color: #f1f3f4; /* Light background for audio player */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+body.dark .audio-player {
+    background-color: #444;
+}
+
+/* Preaching body (content area) */
+.preaching-body {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.preaching-body h2 {
+    font-size: 1.6rem;
+    color: #3498DB; /* Accent color for section titles */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Sub-section separator */
+    padding-bottom: 5px;
+}
+
+body.dark .preaching-body h2 {
+    color: #72C4FF;
+    border-bottom: 1px solid #555;
+}
+
+.preaching-body h3 {
+    font-size: 1.3rem;
+    color: #2C3E50; /* Darker color for sub-headings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+body.dark .preaching-body h3 {
+    color: #ECF0F1;
+}
+
+.preaching-body p {
+    margin-bottom: 1em; /* Spacing between paragraphs */
+}
+
+.preaching-body ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.preaching-body ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Actions section (only Share button remaining) */
+.preaching-actions {
+    display: flex;
+    justify-content: center; /* Center the single share button */
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+body.dark .preaching-actions {
+    border-top: 1px solid #555;
+}
+
+/* --- Estilos para la sección de Comentarios --- */
+
+.comments-section {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+body.dark .comments-section {
+    border-top: 1px solid #555;
+}
+
+.comments-list {
+    margin-bottom: 15px;
+    max-height: 300px; /* Limita la altura para comentarios, con scroll */
+    overflow-y: auto;
+    padding-right: 10px; /* Espacio para el scrollbar */
+}
+
+.comment-item {
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+body.dark .comment-item {
+    background-color: #444;
+    color: #eee;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #05668D; /* Un color distintivo para el nombre de usuario */
+}
+
+body.dark .comment-username {
+    color: #72C4FF; /* Color más claro para el modo oscuro */
+}
+
+.comment-date {
+    font-size: 0.8em;
+    color: #888;
+    margin-left: auto;
+}
+
+body.dark .comment-date {
+    color: #bbb;
+}
+
+.comment-body p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+}
+
+body.dark .comment-body p {
+    color: #ddd;
+}
+
+.comment-input-area {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end; /* Alinea los elementos al final (parte inferior) */
+}
+
+.comment-textarea {
+    flex-grow: 1; /* Permite que el textarea ocupe el espacio disponible */
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    resize: none; /* Deshabilita el redimensionamiento manual por parte del usuario */
+    min-height: 38px; /* Altura mínima similar a un botón */
+    max-height: 150px; /* Altura máxima para evitar que sea demasiado grande */
+    overflow-y: auto; /* Permite scroll si el contenido excede max-height */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+body.dark .comment-input-area textarea {
+    background-color: #444444;
+    color: #FFFFFF;
+    border-color: #555555;
+}
+
+.add-comment-btn {
+    padding: 10px 15px;
+    background-color: #05668D; /* Color del botón de añadir */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+.add-comment-btn:hover {
+    background-color: #044a6b;
+}
+
+/* Estilos para el botón de "Me gusta" cuando está "liked" */
+.like-btn.liked {
+    color: #e74c3c; /* Color de corazón rojo */
+    font-weight: bold;
+}
+
+.no-comments, .error-comments {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 10px;
+}
+.error-comments {
+    color: red;
+}
+
+/* Estilo para el botón de eliminar comentario */
+.delete-comment-btn {
+    background: none; /* Quitar fondo */
+    border: none; /* Quitar borde */
+    color: #e74c3c; /* Color rojo para el icono de eliminar */
+    font-size: 1em; /* Tamaño del emoji */
+    cursor: pointer;
+    padding: 0; /* Sin padding */
+    margin-left: 10px; /* Separación a la izquierda */
+    transition: transform 0.2s ease;
+}
+
+.delete-comment-btn:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+    color: #c0392b; /* Un rojo más oscuro al pasar el ratón */
+}
+
+/* Opcional: ajustar la disposición del header del comentario para que el botón se vea bien */
+.comment-header {
+    margin-bottom: 5px;
+}
+
+/* Opcional: Asegurar que el span del nombre y fecha no se rompa o interfiera */
+.comment-header .username,
+.comment-header .post-date {
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: auto auto; /* Centrar en la pantalla /
+padding: 20px;
+border: 1px solid #888;
+width: 80%; / Ancho del diálogo */
+border-radius: 8px;
+position: relative;
+padding: 15px 40px;
+height: 115px;
+}
+
+body.dark .modal-content {
+background-color: #333;
+color: #eee;
+border-color: #555;
+}
+
+.close-button {
+color: #aaa;
+position: absolute;
+right: 15px;
+top: 10px;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-buttons {
+display: flex;
+justify-content: flex-end;
+margin-top: 20px;
+gap: 10px;
+}
+
+.modal-buttons button {
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 0.9rem;
+}
+
+#confirmDelete {
+background-color: #e74c3c; /* Rojo */
+color: white;
+}
+
+#confirmDelete:hover {
+background-color: #c0392b;
+}
+
+#cancelDelete {
+background-color: #3498db; /* Azul */
+color: white;
+}
+
+#cancelDelete:hover {
+background-color: #2980b9;
+}
+
+/* --- INICIO: Estilos para el Modal de Compartir (AÑADIR ESTO) --- */
+/* Los estilos base .modal y .modal-content ya deberían estar en estilo.css o comunidad.css */
+/* Si no tienes estilos base para .modal y .modal-content, copia también los del paso anterior. */
+
+.share-modal-content {
+    color: white;
+    text-align: center;
+    padding: 100px 50px;
+    margin: 10% auto; 
+    border-radius: 8px;
+    height: 115px;
+}
+
+.share-option-button span {
+    font-size: larger;
+}
+
+
+.share-options {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio entre las opciones */
+    margin-top: 25px;
+    flex-wrap: wrap; /* Para que las opciones se envuelvan en pantallas pequeñas */
+}
+
+.share-option-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Icono arriba, texto abajo */
+    align-items: center;
+    gap: 8px; /* Espacio entre el círculo y el texto */
+    font-family: inherit; /* Hereda la fuente principal */
+    color: inherit; /* Hereda el color del texto */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.share-option-button:hover {
+    transform: translateY(-3px); /* Pequeño efecto al pasar el ratón */
+    color: aliceblue; /* Cambia el color del texto al azul principal */
+}
+
+body.dark .share-option-button:hover {
+    color: aliceblue;
+}
+
+.option-circle {
+    width: 60px; /* Tamaño del círculo */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3498db; /* Azul claro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; /* Tamaño del emoji dentro del círculo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+body.dark .option-circle {
+    background-color: #2980b9; /* Azul oscuro para modo oscuro */
+}
+
+.share-option-button:hover .option-circle {
+    background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+}
+
+body.dark .share-option-button:hover .option-circle {
+    background-color: #3498db;
+}
+
+.share-option-button span {
+    font-size: 0.95em;
+    font-weight: 500;
+}

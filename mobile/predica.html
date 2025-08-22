@@ -1,0 +1,35 @@
+<!DOCTYPE html5>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicación Completa</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/predica.css">
+    <link rel="icon" type="image/x-icon" href="img/image.png">
+</head>
+<body id="body" class="dark-mode fade-in">
+    <div class="contenido">
+        <header>
+            <h1>SharedBible</h1>
+        </header>
+
+        <main class="predica-main">
+            <div id="sermon-container" class="card full-sermon-card">
+                <p>Cargando predicación...</p>
+            </div>
+        </main>
+
+        <footer class="footer-mobile">
+            <a href="inicio.html" onclick="navegarConAnimacion('inicio.html')"><img src="img/icons/als.png" alt="home" width="35" height="35"></a>
+            <a href="comunidad.html" onclick="navegarConAnimacion('comunidad.html')"><img src="img/icons/msj.png" alt="comunidad" width="35" height="35"></a>
+            <a href="testimonios.html" onclick="navegarConAnimacion('testimonios.html')"><img src="img/icons/cora.png" alt="testimonios" width="30" height="30"></a>
+            <a href="consejos.html" onclick="navegarConAnimacion('consejos.html')"><img src="img/icons/im.png" alt="consejos" width="30" height="30"></a>
+            <a href="cuenta.html" onclick="navegarConAnimacion('cuenta.html')"><img src="img/icons/profile.png" alt="cuenta" width="35" height="35"></a>
+        </footer>
+    </div>
+
+    <script src="scripts/animation/navegar.js"></script>
+    <script src="scripts/load-single-sermon.js"></script>
+</body>
+</html>

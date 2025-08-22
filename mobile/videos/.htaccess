@@ -1,0 +1,4 @@
+<FilesMatch "\.(mp4)$">
+  Header set Accept-Ranges bytes
+  Header set Content-Type video/mp4
+</FilesMatch>

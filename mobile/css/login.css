@@ -1,0 +1,145 @@
+@media (max-width: 1026px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #121212; /* fondo oscuro base */
+    color: #eee; /* texto claro para contraste */
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.2s ease forwards;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.2s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  main {
+    padding: 20px 15px;
+  }
+
+  .login-container {
+    background-color: #1e1e1e; /* caja con fondo oscuro más claro */
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 250px; /* reducido de 400px a 300px */
+    margin: 60px auto;
+    text-align: center;
+    margin-top: 24%;
+  }
+
+  .login-container h1 {
+    font-size: 1.8rem;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+  }
+
+  .login-form .form-group {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  .login-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #bbb;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #eee;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+
+  .login-form input[type="text"]::placeholder,
+  .login-form input[type="password"]::placeholder {
+    color: #666;
+  }
+
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    border-color: #28a745;
+    outline: none;
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .login-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #18c240;
+  }
+
+  button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+
+  .login-form button[type="submit"]:hover {
+    background-color: #28a745;
+    transform: translateY(-2px);
+  }
+
+  .signup-link {
+    display: block;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .signup-link a {
+    color: #28a745;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .signup-link a:hover {
+    color: #28a745;
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #666;
+    font-size: 13px;
+  }
+}
+
+.form-message {
+  margin-bottom: 10px;
+}

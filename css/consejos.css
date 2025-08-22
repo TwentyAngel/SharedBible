@@ -1,0 +1,169 @@
+/* Styles for Consejos Page */
+.counsel-search-filter {
+    width: 60%;
+    margin: 40px auto 30px auto;
+    padding: 25px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    text-align: center;
+}
+
+/* Dark mode for counsel-search-filter */
+body.dark .counsel-search-filter {
+    background-color: #333333;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#counselSearch {
+    width: 70%;
+    padding: 12px 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; /* Bordes redondeados solo a la izquierda */
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Dark mode for counselSearch input */
+body.dark #counselSearch {
+    background-color: #444444;
+    color: #FFFFFF;
+    border-color: #555555;
+}
+
+#searchButton {
+    padding: 12px 25px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo a la derecha */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #2980B9;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en varias líneas */
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Botones más redondeados */
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode for filter-buttons */
+body.dark .filter-btn {
+    background-color: #555555;
+    color: #ECECEC;
+    border-color: #666666;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+    color: #333;
+    border-color: #bbb;
+}
+
+/* Dark mode for filter-buttons hover */
+body.dark .filter-btn:hover {
+    background-color: #666666;
+    color: #FFFFFF;
+    border-color: #777777;
+}
+
+.filter-btn.active {
+    background-color: #3498DB;
+    color: white;
+    border-color: #3498DB;
+    font-weight: bold;
+}
+
+/* Dark mode for active filter-button */
+body.dark .filter-btn.active {
+    background-color: #2980B9;
+    border-color: #2980B9;
+}
+
+.counsel-list {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.counsel-card {
+    background-color: #d9dfe0; /* Similar a otras tarjetas */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    color: #212121;
+}
+
+/* Dark mode for counsel-card */
+body.dark .counsel-card {
+    background-color: #3f3f3f;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.counsel-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+/* Dark mode for counsel-card h3 */
+body.dark .counsel-card h3 {
+    color: #ECF0F1;
+}
+
+.counsel-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.counsel-card .bible-verse {
+    font-style: italic;
+    font-weight: bold;
+    color: #7F8C8D; /* Un color gris más oscuro para el versículo */
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 15px;
+    display: block; /* Para que el borde superior se aplique correctamente */
+}
+
+/* Dark mode for bible-verse */
+body.dark .counsel-card .bible-verse {
+    color: #BBBBBB;
+    border-top: 1px solid #555;
+}
+
+/* Adjust main heading margin for consistency */
+main h1 {
+    margin-left: 20%;
+    margin-top: 4%;
+    margin-bottom: 32px;
+}

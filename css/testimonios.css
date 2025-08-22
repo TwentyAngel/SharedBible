@@ -1,0 +1,156 @@
+/* Styles for Testimonios Page */
+.testimony-submission {
+    width: 60%;
+    margin: 40px auto 30px auto;
+    padding: 30px;
+    background-color: #f8f8f8; /* Fondo claro para la sección de envío */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333333; /* Color de texto para el modo claro */
+}
+
+/* Dark mode for testimony-submission section */
+body.dark .testimony-submission {
+    background-color: #333333; /* Fondo oscuro para la sección en modo oscuro */
+    color: #FFFFFF; /* Color de texto para el modo oscuro */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.testimony-submission h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #2C3E50; /* Color de acento similar al header */
+}
+
+/* Dark mode for testimony-submission h2 */
+body.dark .testimony-submission h2 {
+    color: #ECF0F1;
+}
+
+.testimony-submission p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Dark mode for testimony-submission p */
+body.dark .testimony-submission p {
+    color: #BBBBBB;
+}
+
+.testimony-submission textarea,
+.testimony-submission input[type="url"] { /* Estilos para el textarea y el nuevo input de URL */
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px; /* Ajustado el margen inferior para el input también */
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Dark mode for textarea and url input */
+body.dark .testimony-submission textarea,
+body.dark .testimony-submission input[type="url"] {
+    background-color: #444444;
+    color: #FFFFFF;
+    border-color: #555555;
+}
+
+.testimony-submission button {
+    padding: 12px 30px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.testimony-submission button:hover {
+    background-color: #2980B9;
+}
+
+.testimonies-list {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.testimony-card {
+    background-color: #d9dfe0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    color: #212121;
+}
+
+/* Dark mode for testimony-card */
+body.dark .testimony-card {
+    background-color: #3f3f3f;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.testimony-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Dark mode for testimony-header */
+body.dark .testimony-header {
+    color: #BBBBBB;
+}
+
+.testimony-header .testifier-name {
+    font-weight: bold;
+    color: #3498DB;
+}
+
+/* Dark mode for testifier-name */
+body.dark .testimony-header .testifier-name {
+    color: #72C4FF;
+}
+
+.testimony-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Añadido margen inferior para separar del video si existe */
+}
+
+/* Styles for video embedding */
+.testimony-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width = 9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio superior para separar del texto del testimonio */
+    border-radius: 8px; /* Bordes redondeados para el video */
+}
+
+.testimony-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Adjust main heading margin for consistency */
+main h1 {
+    margin-left: 20%;
+    margin-top: 4%;
+    margin-bottom: 32px;
+}

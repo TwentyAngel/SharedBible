@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  padding-bottom: 60px;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.fade-out {
+  animation: fadeOut 0.1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* HEADER FIJO */
+@media (max-width: 1024px) {
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  main {
+    padding-top: 70px;
+  }
+
+  .share-modal-content {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px 25px;
+    margin: 10% auto;
+    border-radius: 8px;
+    height: 115px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    color: #ffffff;
+    background-color: #1e1e1e;
+    margin: auto auto;
+    padding: 10px 20px;
+    border: 1px solid #292929;
+    width: 80%;
+    border-radius: 8px;
+    height: 115px;
+    position: relative;
+  }
+
+  .share-option-button {
+    background-color: #00d1b2;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-family: inherit;
+    color: black;
+    border-radius: 15px;
+  }
+
+  .footer-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .footer-mobile a:hover {
+    color: #00d1b2;
+  }
+}
+
+.footer-mobile a:active img {
+  transform: scale(1.2);
+  transition: transform 0.15s ease;
+}
+
+/* Botones */
+button:active,
+.share-option-button:active,
+.action-btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+/* Tarjeta de publicación */
+@media (max-width: 1024px) {
+  .post-card {
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: aparecerDesdeAbajo 0.4s ease forwards;
+    margin-top: 14px;
+  }
+
+  @keyframes aparecerDesdeAbajo {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .action-btn {
+    background-color: #00d1b2;
+    padding: 6px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .eliminar-btn {
+    background-color: #ff4d4f;
+    color: #ffffff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .comment-textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 35px; /* Ajusta el padding para el botón */
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: white;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  
+  .add-comment-btn {
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 3px; /* Ajusta la posición vertical */
+    right: 3px; /* Ajusta la posición horizontal */
+    background-color: transparent; /* Fondo transparente */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 4px;
+  }
+
+  .post-date {
+    color: #b3b3b3;
+    font-size: smaller;
+    margin-top: 1.5px;
+  }
+
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+main .title {
+  text-align: center;
+}
+
+main h3 {
+  margin-top: 20px;
+  margin-left: 13px;
+  color: #e2e2e2;
+}
+
+main textarea {
+  width: 100%; /* Make the textarea fill its new container */
+  border-radius: 10px;
+  border: 0.5px solid #444;
+  background-color: #121212;
+  color: white;
+  padding: 10px;
+  padding-right: 45px; /* Add padding to prevent text from overlapping the button */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+main button.enviar {
+  position: absolute; /* Position the button relative to its container */
+  bottom: 5px; /* Adjust as needed */
+  right: 5px; /* Adjust as needed */
+  margin: 0; /* Remove auto-margins */
+  padding: 5px; /* Smaller padding for a more compact button */
+  border-radius: 5px; /* Smaller border-radius */
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* No border */
+}
+
+main button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #00d1b2;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+
+.like-btn.liked {
+  color: #ff0000; /* Color de corazón rojo */
+  font-weight: bold;
+}
+
+.post-creation {
+  margin-top: 16px;
+}
+
+.enviar {
+  background-color: #121212;
+  display: flex;
+}
+
+.textarea-container {
+  position: relative; /* This is the key for positioning the button */
+  width: 300px;
+  margin: 0 auto;
+}
+
+.comments-list p {
+  color: #c2c2c2;
+  font-size: smaller;
+  margin-left: 3px;
+}
+
+.comment-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.comment-item {
+  background-color: #242424;
+  border-radius: 12px;
+  padding: 11px;
+  margin: 8px;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-comment-btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.like-text {
+  color: #838383;
+  font-size: smaller;
+  margin: 0;
+}
+
+.ini {
+  margin-top: 25px;
+  margin-left: 12px;
+}

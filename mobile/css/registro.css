@@ -1,0 +1,164 @@
+/* Estilos generales */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #121212; /* fondo oscuro base */
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Contenedor formulario */
+
+.registration-container {
+  background-color: #1e1e1e;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Título */
+
+.registration-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+/* Formulario */
+
+.registration-form .form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #eee;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.registration-form input[type="text"]::placeholder,
+.registration-form input[type="email"]::placeholder,
+.registration-form input[type="password"]::placeholder {
+  color: #666;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form select:focus {
+  border-color: #28a745;
+  outline: none;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Botón */
+
+.registration-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.7);
+}
+
+.registration-form button[type="submit"]:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+/* Enlace para iniciar sesión */
+
+.login-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.login-link a {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #1e7e34;
+  text-decoration: underline;
+}
+
+/* Ajustes para pantallas pequeñas (teléfonos y tablets) */
+
+@media (max-width: 1024px) {
+  .registration-container {
+    max-width: 250px;
+    padding: 25px 20px;
+  }
+
+  .registration-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .registration-form button[type="submit"] {
+    font-size: 1.1rem;
+  }
+}
+
+label {
+  font-size: small;
+  color: white;
+}
+
+a {
+  color: rgb(33, 80, 236);
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.form-message {
+  margin-bottom: 10px;
+}

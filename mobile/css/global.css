@@ -1,0 +1,6 @@
+a, button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* quita el azul en Android */
+  -webkit-focus-ring-color: transparent; /* por si acaso */
+  user-select: none; /* opcional: evita selección de texto accidental */
+}

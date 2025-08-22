@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding-bottom: 60px;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.fade-out {
+  animation: fadeOut 0.2s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.ini {
+    margin-left: 3.7%;
+    margin-top: 5%;
+    margin-bottom: 80%;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(204, 203, 203);
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 26px;
+    color: rgb(219, 219, 219);
+}
+
+a {
+    margin-left: 3.7%;
+    text-decoration: none;
+    background-color: #121212;
+    padding: 5% 15%;
+    color: aliceblue;
+    border: solid white 2px;
+    border-radius: 30px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* quita el azul en Android */
+    -webkit-focus-ring-color: transparent; /* por si acaso */
+    user-select: none; /* opcional: evita selección de texto accidental */
+}
+
+a, button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* quita el azul en Android */
+    -webkit-focus-ring-color: transparent; /* por si acaso */
+    user-select: none; /* opcional: evita selección de texto accidental */
+}
+
+a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}

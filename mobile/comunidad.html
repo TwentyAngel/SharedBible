@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunidad - SharedBible</title>
+  <link rel="stylesheet" href="css/comunidad.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" type="image/x-icon" href="img/image.png" />
+</head>
+
+<body id="body" class="dark-mode fade-in">
+  <div class="contenido">
+    
+    <header id="header">
+      <h1>SharedBible</h1>
+    </header>
+
+    <main>
+      <section class="post-creation">
+        <div class="textarea-container">
+            <textarea id="postContent" placeholder="¿Qué tienes en tu corazón para compartir hoy?" rows="5"></textarea>
+            <button id="publishPost" class="enviar"><img src="img/send.png" alt="" width="22" height="22"></button>
+        </div>
+      </section>
+
+      <h3>Publicaciones de la comunidad:</h3>
+
+      <section class="posts-feed">
+
+        <div class="post-card">
+          <div class="post-header">
+            <span class="username">Usuario Ejemplo 1</span>
+            <span class="post-date">Hace 2 horas</span>
+          </div>
+          <div class="post-body">
+            <p>¡Alabado sea el Señor! Que la paz de Dios que sobrepasa todo entendimiento, guarde vuestros corazones y vuestros pensamientos en Cristo Jesús. Filipenses 4:7.</p>
+          </div>
+          <div class="post-actions">
+            <button class="action-btn like-btn">❤️ Me gusta (15)</button>
+            <button class="action-btn comment-btn">💬 Comentar</button>
+            <button class="action-btn share-btn">🔗 Compartir</button>
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="post-header">
+            <span class="username">FeVerde</span>
+            <span class="post-date">Ayer</span>
+          </div>
+          <div class="post-body">
+            <p>Recordando que "Todo lo puedo en Cristo que me fortalece." Filipenses 4:13. ¡No hay límites con Dios!</p>
+          </div>
+          <div class="post-actions">
+            <button class="action-btn like-btn ${isLiked}" data-post-id="${post.id_publicacion}">
+              ❤️ <br> Likes <span class="like-count">(${post.likes_publicacion})</span>
+            </button>
+            <button class="action-btn comment-btn">💬 Comentar</button>
+            <button class="action-btn share-btn">🔗 Compartir</button>
+          </div>
+          <div class="comments-section" style="display: none;">
+            <div class="comments-list"></div>
+            <div class="comment-input-area">
+              <textarea class="comment-textarea" placeholder="Escribe un comentario..." rows="1"></textarea>
+              <button class="add-comment-btn"><img src="send.png" alt=""></button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="footer-mobile">
+        <a href="inicio.html" onclick="navegarConAnimacion('inicio.html')"><img src="img/icons/als.png" alt="home" width="35" height="35"></a>
+        <a href="comunidad.html" onclick="navegarConAnimacion('comunidad.html')"><img src="img/icons/msj.png" alt="comunidad" width="35" height="35"></a>
+        <a href="testimonios.html" onclick="navegarConAnimacion('testimonios.html')"><img src="img/icons/cora.png" alt="testimonios" width="30" height="30"></a>
+        <a href="consejos.html" onclick="navegarConAnimacion('consejos.html')"><img src="img/icons/im.png" alt="consejos" width="30" height="30"></a>
+        <a href="cuenta.html" onclick="navegarConAnimacion('cuenta.html')"><img src="img/icons/profile.png" alt="cuenta" width="35" height="35"></a>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal de Confirmación para eliminar -->
+  <div id="deleteConfirmationDialog" class="modal">
+    <div class="modal-content">
+      <h3 style="margin-top: 10px;">¿Estás seguro de que quieres eliminar este comentario?</h3>
+      <div class="modal-buttons">
+        <button id="confirmDelete" class="eliminar-btn">Eliminar</button>
+        <button id="cancelDelete" class="action-btn comment-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para compartir publicación -->
+  <div id="shareModal" class="modal">
+    <div class="share-modal-content">
+      <span class="close-button"></span>
+      <h4 class="textoxd">Compartir Publicación</h4>
+      <div class="share-options">
+        <button class="share-option-button" id="savePostButton">
+          <span>💾 Guardar</span>
+        </button>
+        <button class="share-option-button" id="copyLinkButton">
+          <span>🔗 Enlace</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/comunidad.js"></script>
+  <script src="scripts/animation/scroll.js"></script>
+  <script src="scripts/animation/navegar.js"></script>
+</body>
+
+</html>

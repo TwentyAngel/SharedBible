@@ -1,0 +1,96 @@
+
+/* NUEVO: Estilo para la tarjeta de predicación completa en predica.html */
+.full-sermon-card {
+    max-width: 80%; /* Ancho máximo para la predicación completa */
+    margin: 40px auto; /* Centrar en la página */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    color: #333333;
+    width: fit-content;
+}
+
+body.dark .full-sermon-card {
+    max-width: 80%; /* Ancho máximo para la predicación completa */
+    margin: 40px auto; /* Centrar en la página */
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #2c2b2b;
+    border-radius: 10px;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.full-sermon-card h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(32, 124, 245); /* Color del título principal */
+}
+
+.full-sermon-card img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.full-sermon-card .full-sermon-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left; /* Asegura la alineación a la izquierda */
+    white-space: pre-wrap; /* Mantiene los saltos de línea y el texto se ajusta */
+}
+
+/* Asegurar que el main de predica.html también tenga un margen superior */
+.predica-main {
+    padding-top: 20px; /* O el valor que desees para separar del header */
+    flex-grow: 1; /* Para que ocupe el espacio restante y empuje el footer hacia abajo */
+    padding-bottom: 10%;
+}
+
+.card a {
+    color: #1570d1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.linked {
+    text-decoration: none;
+}
+
+.linked:hover {
+    text-decoration: none;
+}
+
+body.dark p {
+    color: #f3f3f3;
+}
+
+.card .image {
+    border-radius: 15px;
+    margin-bottom: 5px;
+    max-width: 28%;
+    max-height: 28%;
+}
+
+.autor {
+    margin-top: 25px;
+    font-size: large;
+}
+
+.fecha {
+    font-size: large;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SharedBible</title>
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body id="body" class="dark-mode fade-in">
+
+  <header id="header">
+    <h1>SharedBible</h1>
+  </header>
+
+  <main class="contenido">
+    <section class="frase-del-dia" id="frase-del-dia">
+      <h2>Frase del Día</h2>
+      <p>"La fe es la certeza de lo que se espera, la convicción de lo que no se ve." - Hebreos 11:1</p>
+    </section>
+
+    <div id="predicador-actions" style="display: none;">
+      <button id="create-sermon-btn" class="create-sermon-btn">Crear nueva predicación</button>
+    </div>
+
+    <h2 class="t1">Predicaciones</h2>
+
+    <div class="sermon-controls">
+      <input type="text" class="sermon-search-bar" id="sermon-search-bar" placeholder="  Buscar predica...">
+      <select id="sermon-filter-rama" class="sermon-filter-rama">
+          <option value="">Todas las Ramas</option>
+          <option value="Luteranismo">Luteranismo</option>
+          <option value="Calvinismo">Calvinismo / Iglesias Reformadas</option>
+          <option value="Anglicanismo">Anglicanismo (o Iglesia Episcopal)</option>
+          <option value="Bautistas">Bautistas</option>
+          <option value="Metodismo">Metodismo</option>
+          <option value="Pentecostalismo">Pentecostalismo</option>
+          <option value="Anabaptistas">Anabaptistas (Menonitas, Amish)</option>
+          <option value="Adventistas">Adventistas</option>
+          <option value="Evangélicas">Iglesias Evangélicas</option>
+      </select>
+      <button id="apply-filters-btn" class="lupa">🔎</button>
+    </div>
+
+
+    <div id="sermons-container" class="cards">
+      </div>
+  </main>
+
+  <footer class="footer-mobile">
+    <a href="inicio.html" onclick="navegarConAnimacion('inicio.html')"><img src="img/icons/als.png" alt="home" width="35" height="35"></a>
+    <a href="comunidad.html" onclick="navegarConAnimacion('comunidad.html')"><img src="img/icons/msj.png" alt="comunidad" width="35" height="35"></a>
+    <a href="testimonios.html" onclick="navegarConAnimacion('testimonios.html')"><img src="img/icons/cora.png" alt="consejos" width="30" height="30"></a>
+    <a href="consejos.html" onclick="navegarConAnimacion('consejos.html')"><img src="img/icons/im.png" alt="consejos" width="30" height="30"></a>
+    <a href="cuenta.html" onclick="navegarConAnimacion('cuenta.html')"><img src="img/icons/profile.png" alt="cuenta" width="35" height="35"></a>
+  </footer>
+
+  <script src="scripts/fetchPhrase.js"></script>
+  <script src="scripts/user-role-checker.js"></script>
+  <script src="scripts/load-sermons.js"></script>
+  <script src="scripts/animation/scroll.js"></script>
+
+  <dialog id="create-sermon-modal" class="create-sermon-modal">
+    <h2>Crear nueva predicación</h2>
+    <form id="sermon-form" method="POST" enctype="multipart/form-data">
+        <label for="sermon-title">Título de la Predicación:</label><br>
+        <input type="text" id="sermon-title" name="titulo_predi" maxlength="140" required><br><br>
+
+        <label for="sermon-content">Contenido de la Predicación:</label><br>
+        <textarea class="contenidopredi" id="sermon-content" name="contenido_predi" rows="10" cols="50" required></textarea><br><br>
+
+        <label for="sermon-image-file">Subir imagen (opcional):</label><br>
+        <input type="file" id="sermon-image-file" name="image_file" accept="image/*"><br><br>
+
+        <label for="sermon-video-file">Subir video (opcional):</label><br>
+        <input type="file" id="sermon-video-file" name="video_file" accept="video/*"><br><br>
+
+        <br class="aviso"><strong>Aviso:</strong> para asegurar el óptimo funcionamiento y la claridad de la aplicación, por favor divida sus prédicas en párrafos utilizando dos o más saltos de línea para mejorar la legibilidad; además, le pedimos no colocar una imagen si ya hay un video ni viceversa, para evitar duplicidad y optimizar la carga visual.</h4></br></br>
+
+        <button type="submit" class="create-sermon-btn">Publicar predicación</button>
+        <button type="button" id="close-sermon-modal" class="create-sermon-btn">Cancelar</button>
+    </form>
+  </dialog>
+
+  <div id="shareModal" class="modal">
+    <div class="share-modal-content">
+        <h4 class="textoxd">Compartir Predicación</h4>
+        <div class="share-options">
+            <button class="share-option-button" id="copyLinkButtonSermons">
+                <span>🔗 Copiar Enlace</span>
+            </button>
+        </div>
+    </div>
+  </div>
+
+  <dialog id="delete-sermon-dialog" class="delete-sermon-dialog">
+    <p>¿Estás seguro de que deseas eliminar esta predicación?</p>
+    <div class="accion">
+      <button id="cancel-delete-sermon">Cancelar</button>
+      <button id="confirm-delete-sermon">Aceptar</button>
+    </div>
+  </dialog>
+
+  <script src="scripts/animation/navegar.js"></script>
+
+  <div id="open-app-banner"></div>
+  <script src="pwa-banner.js"></script>
+
+</body>
+</html>

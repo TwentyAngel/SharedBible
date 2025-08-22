@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding-bottom: 60px;
+    font-family: sans-serif;
+    background-color: #121212;
+    color: white;
+  }
+
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .fade-out {
+    animation: fadeOut 0.1s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  /* HEADER FIJO */
+  @media (max-width: 1024px) {
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: top 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: top 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  
+    main {
+      padding-top: 70px;
+    }
+  
+    .frase-del-dia {
+      padding: 15px;
+      background-color: #1a1a1a;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+  
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .create-sermon-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 15px;
+      background-color: #00d1b2;
+      border: none;
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+    }
+  
+    .footer-mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    }
+  
+    .footer-mobile a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  
+    .footer-mobile a:hover {
+      color: #00d1b2;
+    }
+
+    .full-sermon-card {
+      background-color: #1e1e1e;
+      border-radius: 20px;
+      padding: 16px 20px;
+      margin-top: 18px;
+      margin-bottom: 25px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 0 auto;
+    }
+
+    iframe {
+      margin-top: 4%;
+      border-radius: 15px;
+      width: max-content;
+      height: max-content;
+    }
+    
+  }
+
+  .image {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
