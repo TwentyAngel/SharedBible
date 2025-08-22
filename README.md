@@ -10,4 +10,4 @@ Este proyecto forma parte del portafolio profesional de **TwentyAngel** como pro
 # Estructura SQL
 Por cuestiones de seguirdad no puedo compartir la base de datos en SQL pero aqui se ve la estructura de esta misma.
 
-<img width="226" height="263" alt="image" src="https://github.com/user-attachments/assets/7eceecca-911b-48f9-988f-c5e2ac6dde2d" />
+<img style="border-radius: 20px" width="226" height="263" alt="image" src="https://github.com/user-attachments/assets/7eceecca-911b-48f9-988f-c5e2ac6dde2d" />
