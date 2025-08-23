@@ -15,8 +15,8 @@ $response = ['status' => 'error', 'message' => 'Ocurrió un error inesperado.'];
  * @return string|false URL de embed si fue exitoso, false si falló.
  */
 function subirVideoAArchiveOrg($videoTmpPath, $videoOriginalName) {
-    $access_key = 'nClzKub3xaTNDA4y';    // Tu clave de acceso Archive.org
-    $secret_key = 'VkKcSTkiPwobyu8N';    // Tu clave secreta
+    $access_key = 'PRIVADO!!!';    // Tu clave de acceso Archive.org
+    $secret_key = 'PRIVADO!!!';    // Tu clave secreta
 
     $identifier = 'sharedbible_' . date('YmdHis') . '_' . uniqid();
     $uploadUrl = "https://s3.us.archive.org/$identifier/$videoOriginalName";
